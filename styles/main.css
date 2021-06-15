@@ -18,7 +18,7 @@
     --yellow: hsl(51, 100%, 49%);
     --dark-desaturated-cyan: hsl(167, 40%, 24%); /* (graphic design text) */
     --dark-blue: hsl(198, 62%, 26%); /* (photography text) */
-    --dark-moderate-cyan: hsl(168, 34%, 41%); /* (footer) */
+    --dark-moderate-cyan: hsl(168, 50%, 41%); /* (footer) */
     /* NEUTRAL COLORS */
     --very-dark-desaturated-blue: hsl(212, 27%, 19%);
     --very-dark-grayish-blue: hsl(213, 9%, 39%);
@@ -49,7 +49,8 @@ h6 {
 }
 
 nav {
-    position: absolue;
+    position: absolute;
+    width: 100%;
     top: 0;
     background-color: transparent;
     padding: 0 3rem;
@@ -58,7 +59,6 @@ nav {
 }
 
 main {
-    position: absolute;
     width: 100%;
     top: 0;
     z-index: -1;
@@ -66,6 +66,19 @@ main {
     color: var(--very-dark-desaturated-blue);
 }
 
+footer {
+    background-color: var(--dark-moderate-cyan);
+    height: 400px;
+    text-align: center;
+    padding-top: 4rem;
+    color: var(--dark-desaturated-cyan);
+}
+
+footer img {
+    color: var(--dark-desaturated-cyan); /* NOT WORKING */
+    width: 15vw;
+    margin-bottom: 2rem;
+}
 /* NAVBAR */
 .menu a {
     margin-right: 3rem;
@@ -138,6 +151,98 @@ main {
     background: url(../images/desktop/image-photography.jpg) no-repeat center;
     background-size: cover;
     height: 600px;
+}
+
+/* TESTEMONIALS */
+.main__test {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    height: 700px;
+    margin: auto;
+}
+
+.main__test h2 {
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.card img {
+    border-radius: 50%;
+}
+
+.card p {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    color: var(--very-dark-grayish-blue);
+}
+
+.card h5 {
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 0.5rem;
+}
+
+.card h6 {
+    color: var(--grayish-blue);
+}
+
+/* FOOTER BG */
+.footer_bg_1 {
+    background: url(../images/desktop/image-gallery-milkbottles.jpg) no-repeat center;
+    background-size: cover;
+    height: 600px;
+    grid-column: 1;
+}
+.footer_bg_2 {
+    background: url(../images/desktop/image-gallery-orange.jpg) no-repeat center;
+    background-size: cover;
+    height: 600px;
+    grid-column: 2;
+}
+.footer_bg_3 {
+    background: url(../images/desktop/image-gallery-cone.jpg) no-repeat center;
+    background-size: cover;
+    height: 600px;
+    grid-column: 3;
+}
+.footer_bg_4 {
+    background: url(../images/desktop/image-gallery-sugarcubes.jpg) no-repeat center;
+    background-size: cover;
+    height: 600px;
+    grid-column: 4;
+}
+/* FOOTER */
+.menu-footer {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.menu-footer a {
+    margin: 0 2rem;
+}
+
+.socials {
+    justify-content: center;
+}
+
+.socials a {
+    margin: 0 2rem;
+}
+
+footer a:hover {
+    color: hsl(167, 10%, 24%);
 }
 
 /* MEDIA QUERIES */
